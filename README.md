@@ -88,3 +88,11 @@ npm test
 ```
 
 Tests cover project filtering, modal open/Escape close, skill filtering/details, identity expansion, required-field validation, absence of false delivery notices, mobile navigation, page errors, and page overflow at 360, 390, 768 and 1440px under reduced-motion preferences. Production build performs TypeScript validation. Review branding, contrast, content approvals and mail-client behaviour on target devices before public launch; automated tests are not an accessibility certification.
+
+## Informative content & preloader update
+
+- `components/preloader.tsx` adds a branded, skippable introduction. It exits when local fonts are ready, has a 1.8-second safety cap, respects reduced motion, and is remembered for the current browser session. It never invents a loading percentage and does not hide the server-rendered page when JavaScript is unavailable.
+- `data/insights.ts` centralizes the three-step working approach, individual practical descriptions for all 36 skills, contextual summaries for each employment entry, seven expanded project narratives, proposed workflows, validation questions, and collaboration guidance.
+- Case studies distinguish proposed solutions and validation steps from implemented systems or measured results. No new employment, clients, deployment claims, or outcomes have been added.
+- Regression coverage now includes preloader dismissal/session behaviour, approach cards, proposed workflow stages, and case-study validation questions.
+- Run `npm run format` to format the application, components, content data, and tests with Prettier.
